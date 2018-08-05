@@ -2,18 +2,10 @@ package main
 
 import (
 	"fmt"
-	"bytes"
+	"github.com/golang-demos/go-concat-strings-library/strlib"
 )
 
-func concatStrs(strs ...string) string {
-	var buffer bytes.Buffer
-	for i := 0; i < len(strs); i++ {
-		buffer.WriteString(strs[i])
-	}
-	return buffer.String()
-}
-
 func main() {
-	var finalStr = concatStrs("Hello, ", "Go!")
+	var finalStr = strlib.ConcatStrs("Hello, ", "Go!")
 	fmt.Println(finalStr)
 }
